@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lasers: {fileID: 11400000, guid: 3c49a44c261bb96478bf5d943fa90418, type: 2}
-  _speed: 0.2
+  speed: {fileID: 11400000, guid: b097edfcf01e28447b0a43ab6b09521e, type: 2}
 --- !u!50 &5567069101288871500
 Rigidbody2D:
   serializedVersion: 4

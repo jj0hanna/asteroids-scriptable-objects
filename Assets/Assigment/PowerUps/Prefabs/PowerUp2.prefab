@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4146100441350992921}
   - component: {fileID: 199454425892347114}
   - component: {fileID: -8820344987380198410}
+  - component: {fileID: -2795793970942848778}
   m_Layer: 0
   m_Name: PowerUp2
   m_TagString: PowerUp2
@@ -134,3 +135,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-2795793970942848778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537745246436115899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ff82527f7207d43b69529d7697c76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaserSpeed: {fileID: 11400000, guid: b097edfcf01e28447b0a43ab6b09521e, type: 2}

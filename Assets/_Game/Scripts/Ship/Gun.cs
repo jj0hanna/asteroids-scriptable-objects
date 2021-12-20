@@ -7,9 +7,13 @@ namespace Ship
     {
         [SerializeField] private Laser _laserPrefab;
 
+        [SerializeField] private float timeSinceLastShot;
+        
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
+                
                 Shoot();
         }
         
