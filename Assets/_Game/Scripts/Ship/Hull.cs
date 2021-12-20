@@ -21,6 +21,11 @@ namespace Ship
                 //_onHealthChangedEvent.Raise(_healthRef);
                 _healthObservable.ApplyChange(-1);
             }
+
+            if (string.Equals(other.gameObject.tag, "PowerUp1"))
+            {
+                Debug.Log("collided");
+            }
         }
     }
 }

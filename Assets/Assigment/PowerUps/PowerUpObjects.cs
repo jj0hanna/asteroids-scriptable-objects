@@ -15,17 +15,17 @@ namespace Assigment.PowerUps
         {
             _instanceId = GetInstanceID();
         }
-
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Player"))
+            if (string.Equals(other.tag, "Player"))
             {
+                Debug.Log("hit");
                 IHitThePlayer();
             }
         }
         private void IHitThePlayer()
         {
-            
+            Debug.Log("hit");
             playerCollideWithPowerUp.Raise(_instanceId);
             Destroy(gameObject);
         }

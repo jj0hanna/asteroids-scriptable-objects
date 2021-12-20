@@ -238,6 +238,7 @@ MonoBehaviour:
   powerUps:
   - {fileID: 6531486538360429946, guid: d79ade1e7dc2e564da1a37bea71c6294, type: 3}
   - {fileID: 199454425892347114, guid: 5e10c9b30715cd34a99c3d495fe0ca02, type: 3}
+  spawnIntervall: 1
 --- !u!4 &1309375082
 Transform:
   m_ObjectHideFlags: 0

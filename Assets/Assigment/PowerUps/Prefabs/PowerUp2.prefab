@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3736602861685990753}
   - component: {fileID: 4146100441350992921}
   - component: {fileID: 199454425892347114}
+  - component: {fileID: -8820344987380198410}
   m_Layer: 0
   m_Name: PowerUp2
   m_TagString: PowerUp2
@@ -117,3 +118,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCollideWithPowerUp: {fileID: 11400000, guid: febf3b7f34ca10e4a998b56c1db7e053, type: 2}
+--- !u!58 &-8820344987380198410
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537745246436115899}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
