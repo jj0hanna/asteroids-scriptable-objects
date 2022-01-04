@@ -4,6 +4,7 @@ using DefaultNamespace.ScriptableEvents;
 using RuntimeSets;
 using UnityEngine;
 using Variables;
+//using LaserSpeedPotions = Assigment.PowerUps.LaserSpeedPotion;
 
 namespace Ship
 {
@@ -16,9 +17,9 @@ namespace Ship
         [Header("Values:")] 
         [SerializeField] private FloatVariable speed;
         
-
+        private float maxLazerSpeed = 1f;
         private Rigidbody2D _rigidbody;
-
+        
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
@@ -36,6 +37,16 @@ namespace Ship
             var trans = transform;
             _rigidbody.MovePosition(trans.position + trans.up * speed.Value);
             Debug.Log(speed.Value);
+        }
+        public void AddLaserSpeed(float laserSpeed)
+        {
+            Debug.Log("add speed");
+            if (speed.Value < maxLazerSpeed)
+            {
+                Debug.Log("inside if add speed");
+                speed.ApplyChange(laserSpeed);
+            }
+            
         }
     }
 }

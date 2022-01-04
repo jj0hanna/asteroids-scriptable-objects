@@ -53,6 +53,7 @@ MonoBehaviour:
   _rotationPower: {fileID: 11400000, guid: eb6f17e4493560c4b9750572ccc4f906, type: 2}
   _throttlePowerSimple: 0
   _rotationPowerSimple: 0
+  inventory: {fileID: 11400000, guid: 860c1e31efa2e5343be0bdc11c05ef41, type: 2}
 --- !u!114 &2970632031999273633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +72,7 @@ MonoBehaviour:
     _simpleValue: 12
     _useSimple: 0
   _healthObservable: {fileID: 11400000, guid: a29c193f4c943534ab4728aacaf9839a, type: 2}
+  inventory: {fileID: 11400000, guid: 860c1e31efa2e5343be0bdc11c05ef41, type: 2}
 --- !u!114 &6578066716522484772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _laserPrefab: {fileID: 5567069101288871488, guid: 2b9ecba75bf344a41ae8623bcd4fdab6, type: 3}
+  timeSinceLastShot: 0
 --- !u!1 &3617658530249206207
 GameObject:
   m_ObjectHideFlags: 0

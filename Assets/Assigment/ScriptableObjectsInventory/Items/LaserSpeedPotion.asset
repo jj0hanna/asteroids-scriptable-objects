@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ca5318e2d64f54992512d1bd1fe133, type: 3}
+  m_Name: LaserSpeedPotion
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6537745246436115899, guid: 5e10c9b30715cd34a99c3d495fe0ca02, type: 3}
+  type: 1
+  description: A potion that give the lazer extra speed

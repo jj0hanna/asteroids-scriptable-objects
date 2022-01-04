@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: -8820344987380198410}
   - component: {fileID: -2795793970942848778}
   m_Layer: 0
-  m_Name: PowerUp2
-  m_TagString: PowerUp2
+  m_Name: LaserSpeedPotion
+  m_TagString: SpeedPowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,3 +148,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaserSpeed: {fileID: 11400000, guid: b097edfcf01e28447b0a43ab6b09521e, type: 2}
+  addChange: 0.1

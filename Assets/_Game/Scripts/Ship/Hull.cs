@@ -10,6 +10,8 @@ namespace Ship
         [SerializeField] private ScriptableEventIntReference _onHealthChangedEvent;
         [SerializeField] private IntReference _healthRef;
         [SerializeField] private IntObservable _healthObservable;
+
+        public InventoryObject inventory;
         
         private void OnCollisionEnter2D(Collision2D other)
         {
@@ -21,6 +23,23 @@ namespace Ship
                 //_onHealthChangedEvent.Raise(_healthRef);
                 _healthObservable.ApplyChange(-1);
             }
+
+            if (string.Equals(other.gameObject.tag,"HealthPowerUp"))
+            {
+                inventory.AddItem(ItemType.HealthPotion, 1);
+                Debug.Log("hit healthPotion");
+            }
+            if (string.Equals(other.gameObject.tag,"SpeedPowerUp"))
+            {
+                inventory.AddItem(ItemType.LaserSpeedPotion, 1);
+                Debug.Log("hit healthPotion");
+            }
+            
         }
+        public void addHP(int hp)
+        {
+            _healthObservable.ApplyChange(hp);
+        }
+        
     }
 }

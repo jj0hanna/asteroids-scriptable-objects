@@ -25,22 +25,13 @@ namespace Assigment.PowerUps
                  IHitThePlayer();
              }
          }
-//
-        // private void OnTriggerEnter2D(Collider2D other)
-        // {
-        //     
-        //     if (string.Equals(other.tag, "Player"))
-        //     {
-        //         IHitThePlayer();
-        //     }
-        // }
+
         private void IHitThePlayer()
         {
             playerCollideWithPowerUp.Raise(_instanceId);
             Destroy(gameObject);
         }
-
-        // TODO Can we move this to a single listener, something like an AsteroidDestroyer?
+        
         public void OnHitByThePlayer(IntReference powerUpID)
         {
             if (_instanceId == powerUpID.GetValue())

@@ -12,7 +12,11 @@ namespace Ship
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+           // if (Input.GetButton("Jump"))
+           // {
+           //     Debug.Log("HOlding down");
+           // }
+            if (Input.GetKeyDown(KeyCode.Space))    
                 
                 Shoot();
         }
@@ -22,5 +26,6 @@ namespace Ship
             var trans = transform;
             Instantiate(_laserPrefab, trans.position, trans.rotation);
         }
+        
     }
 }
