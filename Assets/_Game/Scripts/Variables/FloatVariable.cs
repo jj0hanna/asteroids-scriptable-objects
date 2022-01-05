@@ -19,26 +19,9 @@ namespace Variables
             _currentValue += change;
         }
 
-       //public virtual void SetValue(float newValue)
-       //{
-       //    _currentValue = newValue;
-       //}
-
         private void OnEnable()
         {
             _currentValue = _value;
         }
-        
-        
-
-        //public float Value
-        //{
-        //    get => _value;
-        //    set => _value = value;
-        //}
-        //public virtual void ApplyChange(float change)
-        //{
-        //    _currentValue += change;
-        //}
     }
 }

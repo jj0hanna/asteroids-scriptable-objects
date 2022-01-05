@@ -1,9 +1,8 @@
 using Assigment.PowerUps;
+using Assigment.ScriptableObjectsInventory.Items.Scripts;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using Variables;
-using HealthPotion = Assigment.ScriptableObjectsInventory.Items.Scripts.HealthPotion;
-using LaserSpeedPotion = Assigment.ScriptableObjectsInventory.Items.Scripts.LaserSpeedPotion;
 using LaserSpeedPotions = Assigment.PowerUps.LaserSpeedPotion;
 
 
@@ -19,7 +18,7 @@ namespace Ship
         [SerializeField] private float _throttlePowerSimple;
         [SerializeField] private float _rotationPowerSimple;
 
-        //[SerializeField] private IntObservable _healthObservable;
+        [SerializeField] private FloatVariable LaserSpeed;
         
         private Rigidbody2D _rigidbody;
         
@@ -41,12 +40,12 @@ namespace Ship
                 SteerRight();
             }
 //TODO fix so when i press it does not take more then one pot
-            if (Input.GetKey(KeyCode.Alpha1))
+            if (Input.GetKey(KeyCode.Alpha2))
             {
                 DrinkHealthPotion();
             }
 
-            if (Input.GetKey(KeyCode.Alpha2))
+            if (Input.GetKey(KeyCode.Alpha1))
             {
                 DrinkSpeedPotion();
             }
@@ -75,10 +74,9 @@ namespace Ship
         {
             if (inventory.Contains(ItemType.HealthPotion ,out ItemType item ))
             {
-                HealthPotion Object = ScriptableObject.CreateInstance<HealthPotion>();
-                Object.Drink(GetComponent<Hull>());
+                HealthPotionObject Object = ScriptableObject.CreateInstance<HealthPotionObject>();
+                Object.Drink(GetComponent<Hull>()); //TODO fix just as the other potion
                 
-                Debug.Log("Drinking healthPotion");
                 inventory.RemoveItem(ItemType.HealthPotion, 1);
             }
         }
@@ -86,11 +84,9 @@ namespace Ship
         {
             if (inventory.Contains(ItemType.LaserSpeedPotion ,out ItemType item ))
             {
-                LaserSpeedPotion Object = ScriptableObject.CreateInstance<LaserSpeedPotion>();
-                Object.Drink(GetComponent<Laser>());
+                LaserSpeedPotionObject Object = ScriptableObject.CreateInstance<LaserSpeedPotionObject>();
+                Object.Drink(LaserSpeed);
                 
-                
-                Debug.Log("Drinking SpeedPotion");
                 inventory.RemoveItem(ItemType.LaserSpeedPotion, 1);
             }
         }

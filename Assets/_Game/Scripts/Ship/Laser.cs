@@ -17,7 +17,6 @@ namespace Ship
         [Header("Values:")] 
         [SerializeField] private FloatVariable speed;
         
-        private float maxLazerSpeed = 1f;
         private Rigidbody2D _rigidbody;
         
         private void Start()
@@ -37,16 +36,6 @@ namespace Ship
             var trans = transform;
             _rigidbody.MovePosition(trans.position + trans.up * speed.Value);
             Debug.Log(speed.Value);
-        }
-        public void AddLaserSpeed(float laserSpeed)
-        {
-            Debug.Log("add speed");
-            if (speed.Value < maxLazerSpeed)
-            {
-                Debug.Log("inside if add speed");
-                speed.ApplyChange(laserSpeed);
-            }
-            
         }
     }
 }
