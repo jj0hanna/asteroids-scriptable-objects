@@ -198,6 +198,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52284889}
   m_CullTransparentMesh: 1
+--- !u!1 &204506770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 204506772}
+  - component: {fileID: 204506771}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &204506771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204506770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74367ac545aff445af09e9f90812651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverPanel: {fileID: 268078620}
+  inventory: {fileID: 11400000, guid: 860c1e31efa2e5343be0bdc11c05ef41, type: 2}
+  _healthObservable: {fileID: 11400000, guid: a29c193f4c943534ab4728aacaf9839a, type: 2}
+  _health: {fileID: 11400000, guid: 40cfb1e1b58e0f84a966e03698c56110, type: 2}
+  LaserSpeed: {fileID: 11400000, guid: b097edfcf01e28447b0a43ab6b09521e, type: 2}
+--- !u!4 &204506772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204506770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &268078620
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +339,7 @@ RectTransform:
   m_Children:
   - {fileID: 1289337362}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -455,7 +503,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 694618054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1289337365}
+        m_TargetAssemblyTypeName: Assigment.GameControllers.GameOverManager, Assembly-CSharp
+        m_MethodName: QuitMethod
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &694618054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,7 +955,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1108670947}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1289337365}
+        m_TargetAssemblyTypeName: Assigment.GameControllers.GameOverManager, Assembly-CSharp
+        m_MethodName: RestartMethod
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1108670947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1079,6 +1151,7 @@ GameObject:
   - component: {fileID: 1289337362}
   - component: {fileID: 1289337364}
   - component: {fileID: 1289337363}
+  - component: {fileID: 1289337365}
   m_Layer: 5
   m_Name: RestartPanel
   m_TagString: Untagged
@@ -1146,6 +1219,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289337361}
   m_CullTransparentMesh: 1
+--- !u!114 &1289337365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289337361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a283901412af24fa8de86d013406f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1309375080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,6 +1630,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2970632031999273633, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 204506771}
     - target: {fileID: 2970632031999273636, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
       propertyPath: m_Name
       value: Ship
@@ -1593,10 +1682,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2970632031999273638, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
-      propertyPath: LaserSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: b097edfcf01e28447b0a43ab6b09521e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
 --- !u!1001 &7101966234704262264

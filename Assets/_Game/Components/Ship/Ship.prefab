@@ -53,6 +53,7 @@ MonoBehaviour:
   _rotationPower: {fileID: 11400000, guid: eb6f17e4493560c4b9750572ccc4f906, type: 2}
   _throttlePowerSimple: 0
   _rotationPowerSimple: 0
+  LaserSpeed: {fileID: 11400000, guid: b097edfcf01e28447b0a43ab6b09521e, type: 2}
   inventory: {fileID: 11400000, guid: 860c1e31efa2e5343be0bdc11c05ef41, type: 2}
 --- !u!114 &2970632031999273633
 MonoBehaviour:
@@ -72,6 +73,7 @@ MonoBehaviour:
     _simpleValue: 12
     _useSimple: 0
   _healthObservable: {fileID: 11400000, guid: a29c193f4c943534ab4728aacaf9839a, type: 2}
+  gameManager: {fileID: 0}
   inventory: {fileID: 11400000, guid: 860c1e31efa2e5343be0bdc11c05ef41, type: 2}
 --- !u!114 &6578066716522484772
 MonoBehaviour:

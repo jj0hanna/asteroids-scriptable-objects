@@ -1,3 +1,4 @@
+using Assigment.GameControllers;
 using DefaultNamespace.ScriptableEvents;
 using UnityEngine;
 using Variables;
@@ -11,8 +12,10 @@ namespace Ship
         [SerializeField] private IntReference _healthRef;
         [SerializeField] private IntObservable _healthObservable;
 
+        [SerializeField] private GameManager gameManager;
+
         public InventoryObject inventory;
-        
+
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (string.Equals(other.gameObject.tag, "Asteroid"))
@@ -46,8 +49,9 @@ namespace Ship
         {
             _healthObservable.ApplyChange(hp);
         }
-        public void GameOver()
+        private void GameOver()
         {
+            gameManager.GameOver();
             Debug.Log("GameOver");
         }
         

@@ -19,6 +19,11 @@ namespace Variables
             _currentValue += change;
         }
 
+        public virtual void ResetValueToStandard()
+        {
+            _currentValue = _value;
+        }
+
         private void OnEnable()
         {
             _currentValue = _value;

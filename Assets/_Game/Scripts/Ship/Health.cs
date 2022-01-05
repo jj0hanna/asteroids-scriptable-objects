@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Ship
 {
     public class Health : MonoBehaviour
     {
         private int _health = 10;
-        
+
         private const int MIN_HEALTH = 0;
         
         public void TakeDamage(int damage)
@@ -13,5 +14,6 @@ namespace Ship
             Debug.Log("Took some damage");
             _health = Mathf.Max(MIN_HEALTH, _health - damage);
         }
+
     }
 }

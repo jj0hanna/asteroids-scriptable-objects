@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Variables;
 
@@ -5,23 +6,23 @@ namespace Assigment.PowerUps
 {
     public class HealthPotion : MonoBehaviour
     {
-        //[SerializeField] private IntObservable _healthObservable;
+        private int DestroyAfterSeacond;
         
+
+        private void Awake()
+        {
+            
+        }
+
         private void OnCollisionEnter2D(Collision2D other)
         {
              
             if (string.Equals(other.gameObject.tag, "Player"))
-           // {
-           //     AddHp();
-           // }
-           // else
             {
                 Destroy(gameObject);
             }
         }
-       //private void AddHp()
-       //{
-       //    _healthObservable.ApplyChange(+2);
-       //}
+        
+       
     }
 }
