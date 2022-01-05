@@ -23,7 +23,7 @@ namespace Ship
         private Rigidbody2D _rigidbody;
         
         public InventoryObject inventory;
-        
+
         private void FixedUpdate()
         {
             if (Input.GetKey(KeyCode.UpArrow))
@@ -40,12 +40,13 @@ namespace Ship
                 SteerRight();
             }
 //TODO fix so when i press it does not take more then one pot
-            if (Input.GetKey(KeyCode.Alpha2))
-            {
+            if (Input.GetKey(KeyCode.Alpha1))
+            { 
+                Debug.Log("klicked on potion");
                 DrinkHealthPotion();
             }
 
-            if (Input.GetKey(KeyCode.Alpha1))
+            if (Input.GetKey(KeyCode.Alpha2))
             {
                 DrinkSpeedPotion();
             }

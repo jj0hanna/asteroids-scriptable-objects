@@ -5,8 +5,6 @@ namespace Assigment.GameControllers
 {
     public class GameOverManager : MonoBehaviour
     {
-        
-
         public void RestartMethod()
         {
             SceneManager.LoadScene("Asteroids");

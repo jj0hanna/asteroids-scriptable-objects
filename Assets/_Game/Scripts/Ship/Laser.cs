@@ -4,7 +4,6 @@ using DefaultNamespace.ScriptableEvents;
 using RuntimeSets;
 using UnityEngine;
 using Variables;
-//using LaserSpeedPotions = Assigment.PowerUps.LaserSpeedPotion;
 
 namespace Ship
 {
